@@ -1,7 +1,7 @@
 sub EXPORT (*@wanted) {
     my $where-to = try {$*W.current_file} // '<unknown file>';
 
-    @wanted or die "Specify at least one function for SPEC::Func to import in"
+    @wanted or die "Specify at least one function for SPEC::Func to import into"
         ~ " $where-to. Your choices are {$*SPEC.^methods».name.sort}";
 
     Map.new: @wanted.unique.map: {
