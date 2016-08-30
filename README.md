@@ -7,7 +7,6 @@ SPEC::Func - Import `$*SPEC` methods as functions
 # SYNOPSIS
 
 ```perl6
-    use lib <lib>;
     use SPEC::Func <dir-sep splitdir>;
     say join dir-sep, map &flip, splitdir 'foo/bar/ber';
 
